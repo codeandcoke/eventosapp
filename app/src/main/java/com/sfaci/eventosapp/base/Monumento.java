@@ -1,7 +1,9 @@
 package com.sfaci.eventosapp.base;
 
 /**
- * Created by dam on 17/11/15.
+ * Clave Monumento
+ * @author Santiago Faci
+ * @version curso 2015-2016
  */
 public class Monumento {
 
