@@ -53,7 +53,7 @@ public class Database extends SQLiteOpenHelper {
         values.put(NOMBRE_EVENTO, evento.getNombre());
         values.put(DESCRIPCION_EVENTO, evento.getDescripcion());
 
-        db.insertOrThrow(TABLA_EVENTOS, null, values)
+        db.insertOrThrow(TABLA_EVENTOS, null, values);
 
     }
 
