@@ -44,6 +44,10 @@ public class Database extends SQLiteOpenHelper {
         // onCreate(db);
     }
 
+    /**
+     * Crea un nuevo evento en la Base de Datos
+     * @param evento
+     */
     public void nuevoEvento(Evento evento) {
 
         SQLiteDatabase db = getWritableDatabase();
@@ -55,13 +59,61 @@ public class Database extends SQLiteOpenHelper {
 
         db.insertOrThrow(TABLA_EVENTOS, null, values);
 
+        // Tambien se pueden lanzar sentencia SQL
+        // String[] argumentos = new String[]{arg1, arg2, arg3};
+        //db.execSQL("INSERT INTO . . . . ? ? ?", argumentos);
     }
 
+    /**
+     * Modifica un evento de la Base de Datos
+     * @param evento
+     */
+    public void modificarEvento(Evento evento) {
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        // TODO Rellenar todos los campos de un Evento
+        ContentValues values = new ContentValues();
+        values.put(NOMBRE_EVENTO, evento.getNombre());
+        values.put(DESCRIPCION_EVENTO, evento.getDescripcion());
+
+        String[] argumentos = new String[]{String.valueOf(evento.getId())};
+        db.update(TABLA_EVENTOS, values, "id = ?", argumentos);
+
+        // Tambien se pueden lanzar sentencia SQL
+        // String[] argumentos = new String[]{arg1, arg2, arg3};
+        //db.execSQL("UPDATE eventos SET . . . ? ? ?", argumentos);
+    }
+
+    /**
+     * Elimina un evento de la Base de Datos
+     * @param evento
+     */
+    public void eliminarEvento(Evento evento) {
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        String[] argumentos = new String[]{String.valueOf(evento.getId())};
+        db.delete(TABLA_EVENTOS, "id = ?", argumentos);
+
+        // Tambien se pueden lanzar sentencia SQL
+        // String[] argumentos = new String[]{arg1, arg2, arg3};
+        //db.execSQL("DELETE FROM . . . . ? ? ?", argumentos);
+    }
+
+    /**
+     * Obtiene todos los eventos de la Base de Datos
+     * @return
+     */
     public Cursor getEventos() {
 
         SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = db.query(TABLA_EVENTOS, SELECT_CURSOR, null, null, null, null, ORDER_BY);
         return cursor;
+
+        // Tambien se pueden lanzar sentencia SQL
+        // String[] argumentos = new String[]{arg1, arg2, arg3};
+        //db.rawQuery("SELECT nombre, descripcion . . . WHERE . . . ? ? ?", argumentos);
     }
 }

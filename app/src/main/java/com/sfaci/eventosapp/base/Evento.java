@@ -9,6 +9,7 @@ import java.util.Date;
  */
 public class Evento {
 
+    private long id;
     private String nombre;
     private String descripcion;
     private String direccion;
@@ -19,6 +20,8 @@ public class Evento {
     public Evento() {
 
     }
+
+    public long getId() { return id; }
 
     public String getNombre() {
         return nombre;
