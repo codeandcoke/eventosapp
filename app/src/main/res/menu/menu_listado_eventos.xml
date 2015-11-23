@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sfaci.eventosapp.activities.ListadoEventos">
+    <item android:id="@+id/action_anadir_evento" android:title="@string/label_anadir"
+        android:orderInCategory="100" android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_add"/>
+    <item android:id="@+id/action_monumentos" android:title="@string/label_monumentos"
+        android:orderInCategory="100" android:showAsAction="always"
+        android:icon="@drawable/monumento"/>
+</menu>

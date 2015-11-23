@@ -1,9 +1,12 @@
 package com.sfaci.eventosapp.base;
 
+import android.graphics.Bitmap;
+
 import java.util.Date;
 
 /**
- * Clave Evento
+ * Clase Evento
+ *
  * @author Santiago Faci
  * @version curso 2015-2016
  */
@@ -16,9 +19,14 @@ public class Evento {
     private float precio;
     private Date fecha;
     private int aforo;
+    private Bitmap imagen;
 
     public Evento() {
 
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public long getId() { return id; }
@@ -69,5 +77,13 @@ public class Evento {
 
     public void setAforo(int aforo) {
         this.aforo = aforo;
+    }
+
+    public Bitmap getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(Bitmap imagen) {
+        this.imagen = imagen;
     }
 }

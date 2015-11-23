@@ -12,11 +12,27 @@
         <activity
             android:name=".activities.ListadoMonumentos"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activities.RegistroEventos"
+            android:label="@string/title_activity_registro_eventos" >
+        </activity>
+        <activity
+            android:name=".activities.ListadoEventos"
+            android:label="@string/title_activity_listado_eventos" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.RegistroOpinion"
+            android:label="@string/title_activity_registro_opinion" >
+        </activity>
+        <activity
+            android:name=".activities.ListadoOpiniones"
+            android:label="@string/title_activity_listado_opiniones" >
         </activity>
     </application>
 

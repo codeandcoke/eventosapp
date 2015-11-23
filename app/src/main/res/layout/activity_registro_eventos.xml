@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.sfaci.eventosapp.activities.RegistroEventos">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:hint="@string/label_nombre" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDescripcion"
+        android:layout_below="@+id/etNombre"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignRight="@+id/etNombre"
+        android:hint="@string/label_descripcion" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDireccion"
+        android:layout_below="@+id/etDescripcion"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignRight="@+id/etDescripcion"
+        android:hint="@string/label_direccion" />
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/etPrecio"
+        android:layout_below="@+id/etDireccion"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="33dp"
+        android:hint="@string/label_precio" />
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/etFecha"
+        android:layout_below="@+id/etPrecio"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:hint="@string/label_fecha" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etAforo"
+        android:layout_below="@+id/etFecha"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignRight="@+id/etPrecio"
+        android:hint="@string/label_aforo" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/ivImagen"
+        android:layout_below="@+id/etPrecio"
+        android:layout_alignRight="@+id/etDireccion"
+        android:src="@drawable/ic_launcher"
+        android:contentDescription="@string/label_imagen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_guardar"
+        android:id="@+id/btGuardar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_cerrar"
+        android:id="@+id/btCerrar"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/etFecha" />
+
+</RelativeLayout>

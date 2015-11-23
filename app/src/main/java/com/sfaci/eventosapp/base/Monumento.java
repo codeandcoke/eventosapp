@@ -1,7 +1,8 @@
 package com.sfaci.eventosapp.base;
 
 /**
- * Clave Monumento
+ * Clase Monumento
+ *
  * @author Santiago Faci
  * @version curso 2015-2016
  */

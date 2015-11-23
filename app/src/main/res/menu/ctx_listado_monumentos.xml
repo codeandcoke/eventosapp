@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".ListadoMonumentos">
+    <item android:id="@+id/action_opinar" android:title="@string/mensaje_opinar"
+        android:orderInCategory="100" android:showAsAction="always" />
+    <item android:id="@+id/action_ver_opiniones" android:title="@string/mensaje_ver_opiniones"
+        android:orderInCategory="100" android:showAsAction="always" />
+</menu>

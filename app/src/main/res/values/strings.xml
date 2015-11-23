@@ -2,11 +2,37 @@
 <resources>
 
     <string name="app_name">EventosApp</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_ver_mapa">Ver Mapa</string>
+    <string name="title_activity_registro_eventos">RegistroEventos</string>
+    <string name="title_activity_listado_eventos">ListadoEventos</string>
     <string name="mensaje_error">No se han podido descargar los datos</string>
     <string name="mensaje_ok">Ok</string>
-    <string name="title_activity_mapa">Mapa</string>
+    <string name="mensaje_esta_seguro">¿Está seguro?</string>
+    <string name="mensaje_error_fecha">Formato de fecha no válido</string>
+    <string name="mensaje_nuevo_evento">Evento Registrado</string>
+    <string name="mensaje_opinar">Opinar</string>
+    <string name="mensaje_cargando">Cargando Datos</string>
+    <string name="mensaje_enviando">Enviando Datos</string>
+    <string name="mensaje_ver_opiniones">Ver opiniones</string>
+    <string name="label_nombre">Nombre</string>
+    <string name="label_descripcion">Descripción</string>
+    <string name="label_direccion">Dirección</string>
+    <string name="label_precio">Precio</string>
+    <string name="label_fecha">Fecha</string>
+    <string name="label_aforo">Aforo</string>
+    <string name="label_imagen">Imagen</string>
+    <string name="label_guardar">Guardar</string>
+    <string name="label_cerrar">Cerrar</string>
+    <string name="label_si">Si</string>
+    <string name="label_no">No</string>
+    <string name="label_monumentos">Monumentos</string>
+    <string name="label_anadir">Añadir</string>
+    <string name="label_titulo">Título</string>
+    <string name="label_texto">Texto</string>
+    <string name="label_puntuacion">Puntuación</string>
+    <string name="title_activity_registro_opinion">RegistroOpinion</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_listado_opiniones">ListadoOpiniones</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
