@@ -2,7 +2,6 @@ package com.sfaci.eventosapp.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.sfaci.eventosapp.R;
-import com.sfaci.eventosapp.base.Evento;
+import com.sfaci.eventosapp.base.EventoImagen;
 import com.sfaci.eventosapp.database.Database;
 import com.sfaci.eventosapp.util.Util;
 
@@ -106,7 +105,7 @@ public class RegistroEventos extends Activity implements View.OnClickListener {
                     etAforo.setText("0");
 
                 try {
-                    Evento evento = new Evento();
+                    EventoImagen evento = new EventoImagen();
                     evento.setNombre(etNombre.getText().toString());
                     evento.setDescripcion(etDescripcion.getText().toString());
                     evento.setDireccion(etDireccion.getText().toString());

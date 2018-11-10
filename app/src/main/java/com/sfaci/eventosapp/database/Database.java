@@ -6,11 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.sfaci.eventosapp.base.Evento;
+import com.sfaci.eventosapp.base.EventoImagen;
 import com.sfaci.eventosapp.util.Util;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -60,7 +59,7 @@ public class Database extends SQLiteOpenHelper {
      * Crea un nuevo evento en la Base de Datos
      * @param evento
      */
-    public void nuevoEvento(Evento evento) {
+    public void nuevoEvento(EventoImagen evento) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -85,7 +84,7 @@ public class Database extends SQLiteOpenHelper {
      * Modifica un evento de la Base de Datos
      * @param evento
      */
-    public void modificarEvento(Evento evento) {
+    public void modificarEvento(EventoImagen evento) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -107,7 +106,7 @@ public class Database extends SQLiteOpenHelper {
      * Elimina un evento de la Base de Datos
      * @param evento
      */
-    public void eliminarEvento(Evento evento) {
+    public void eliminarEvento(EventoImagen evento) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -124,15 +123,15 @@ public class Database extends SQLiteOpenHelper {
      * Obtiene todos los eventos de la Base de Datos como un ArrayList
      * @return
      */
-    public ArrayList<Evento> getEventos() {
+    public ArrayList<EventoImagen> getEventos() {
 
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(TABLA_EVENTOS, SELECT_CURSOR, null, null, null, null, ORDER_BY);
 
-        ArrayList<Evento> listaEventos = new ArrayList<Evento>();
-        Evento evento = null;
+        ArrayList<EventoImagen> listaEventos = new ArrayList<EventoImagen>();
+        EventoImagen evento = null;
         while (cursor.moveToNext()) {
-            evento = new Evento();
+            evento = new EventoImagen();
             evento.setId(cursor.getLong(0));
             evento.setNombre(cursor.getString(1));
             evento.setDescripcion(cursor.getString(2));

@@ -5,12 +5,12 @@ import android.graphics.Bitmap;
 import java.util.Date;
 
 /**
- * Clase Evento del servidor
+ * Clase Evento
  *
  * @author Santiago Faci
  * @version curso 2015-2016
  */
-public class Evento {
+public class EventoImagen {
 
     private long id;
     private String nombre;
@@ -19,9 +19,9 @@ public class Evento {
     private float precio;
     private Date fecha;
     private int aforo;
-    private String imagen;
+    private Bitmap imagen;
 
-    public Evento() {
+    public EventoImagen() {
 
     }
 
@@ -79,11 +79,11 @@ public class Evento {
         this.aforo = aforo;
     }
 
-    public String getImagen() {
+    public Bitmap getImagen() {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public void setImagen(Bitmap imagen) {
         this.imagen = imagen;
     }
 }

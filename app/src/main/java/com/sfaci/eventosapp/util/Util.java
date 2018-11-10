@@ -2,6 +2,7 @@ package com.sfaci.eventosapp.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Base64;
 
 import java.io.ByteArrayOutputStream;
 import java.text.ParseException;
@@ -55,5 +56,24 @@ public class Util {
     public static Date parsearFecha(String fecha) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         return dateFormat.parse(fecha);
+    }
+
+    public static String encodeBase64(Bitmap imagen) {
+
+        String code = null;
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        imagen.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] bytes = baos.toByteArray();
+
+        code = Base64.encodeToString(bytes, Base64.URL_SAFE);
+
+        return code;
+    }
+
+    public static Bitmap decodeBase64(String imagen) {
+
+        byte[] bytes = Base64.decode(imagen, 0);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
 }

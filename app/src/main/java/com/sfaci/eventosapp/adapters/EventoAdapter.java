@@ -10,11 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sfaci.eventosapp.R;
-import com.sfaci.eventosapp.base.Evento;
+import com.sfaci.eventosapp.base.EventoImagen;
 import com.sfaci.eventosapp.util.Util;
 
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -23,20 +22,20 @@ import java.util.ArrayList;
  * @author Santiago Faci
  * @version curso 2015-2016
  */
-public class EventoAdapter extends ArrayAdapter<Evento> {
+public class EventoAdapter extends ArrayAdapter<EventoImagen> {
 
     private Context contexto;
     private int layoutId;
-    private ArrayList<Evento> datos;
+    private ArrayList<EventoImagen> datos;
 
-    public EventoAdapter(Context contexto, int layoutId, ArrayList<Evento> datos) {
+    public EventoAdapter(Context contexto, int layoutId, ArrayList<EventoImagen> datos) {
         super(contexto, layoutId, datos);
         this.contexto = contexto;
         this.layoutId = layoutId;
         this.datos = datos;
     }
 
-    public void setDatos(ArrayList<Evento> datos) {
+    public void setDatos(ArrayList<EventoImagen> datos) {
         this.datos = datos;
     }
 
@@ -62,7 +61,7 @@ public class EventoAdapter extends ArrayAdapter<Evento> {
             item = (ItemEvento) fila.getTag();
         }
 
-        Evento evento = datos.get(posicion);
+        EventoImagen evento = datos.get(posicion);
         item.imagen.setImageBitmap(evento.getImagen());
         item.nombre.setText(evento.getNombre());
         item.fecha.setText(Util.formatearFecha(evento.getFecha()));
@@ -82,7 +81,7 @@ public class EventoAdapter extends ArrayAdapter<Evento> {
     }
 
     @Override
-    public Evento getItem(int posicion) {
+    public EventoImagen getItem(int posicion) {
 
         return datos.get(posicion);
     }
